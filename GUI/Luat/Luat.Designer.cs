@@ -76,12 +76,14 @@
             // 
             this.dgvTrieuChung.AllowUserToAddRows = false;
             this.dgvTrieuChung.AllowUserToDeleteRows = false;
+            this.dgvTrieuChung.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvTrieuChung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTrieuChung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.Column2});
             this.dgvTrieuChung.Location = new System.Drawing.Point(9, 28);
             this.dgvTrieuChung.Name = "dgvTrieuChung";
+            this.dgvTrieuChung.RowHeadersVisible = false;
             this.dgvTrieuChung.Size = new System.Drawing.Size(353, 197);
             this.dgvTrieuChung.TabIndex = 11;
             // 
@@ -119,7 +121,7 @@
             this.txtLuatSo.Enabled = false;
             this.txtLuatSo.Location = new System.Drawing.Point(73, 69);
             this.txtLuatSo.Name = "txtLuatSo";
-            this.txtLuatSo.Size = new System.Drawing.Size(195, 26);
+            this.txtLuatSo.Size = new System.Drawing.Size(195, 22);
             this.txtLuatSo.TabIndex = 9;
             // 
             // label5
@@ -127,7 +129,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 8;
             this.label5.Text = "Luật số";
             // 
@@ -136,7 +138,7 @@
             this.txtVePhai.Enabled = false;
             this.txtVePhai.Location = new System.Drawing.Point(73, 152);
             this.txtVePhai.Name = "txtVePhai";
-            this.txtVePhai.Size = new System.Drawing.Size(195, 26);
+            this.txtVePhai.Size = new System.Drawing.Size(195, 22);
             this.txtVePhai.TabIndex = 7;
             // 
             // txtVeTrai
@@ -144,7 +146,7 @@
             this.txtVeTrai.Enabled = false;
             this.txtVeTrai.Location = new System.Drawing.Point(73, 110);
             this.txtVeTrai.Name = "txtVeTrai";
-            this.txtVeTrai.Size = new System.Drawing.Size(195, 26);
+            this.txtVeTrai.Size = new System.Drawing.Size(195, 22);
             this.txtVeTrai.TabIndex = 6;
             // 
             // label2
@@ -152,7 +154,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Vế phải";
             // 
@@ -161,7 +163,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Vế trái";
             // 
@@ -196,7 +198,7 @@
             this.groupBox3.Controls.Add(this.dgvLuat);
             this.groupBox3.Location = new System.Drawing.Point(9, 276);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(604, 293);
+            this.groupBox3.Size = new System.Drawing.Size(591, 293);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách tập luật";
@@ -205,13 +207,15 @@
             // 
             this.dgvMoTaLuat.AllowUserToAddRows = false;
             this.dgvMoTaLuat.AllowUserToDeleteRows = false;
+            this.dgvMoTaLuat.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvMoTaLuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMoTaLuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn4});
             this.dgvMoTaLuat.Location = new System.Drawing.Point(306, 29);
             this.dgvMoTaLuat.Name = "dgvMoTaLuat";
-            this.dgvMoTaLuat.Size = new System.Drawing.Size(289, 258);
+            this.dgvMoTaLuat.RowHeadersVisible = false;
+            this.dgvMoTaLuat.Size = new System.Drawing.Size(268, 258);
             this.dgvMoTaLuat.TabIndex = 13;
             // 
             // dataGridViewTextBoxColumn2
@@ -233,19 +237,21 @@
             this.lblCountRules.AutoSize = true;
             this.lblCountRules.Location = new System.Drawing.Point(526, 10);
             this.lblCountRules.Name = "lblCountRules";
-            this.lblCountRules.Size = new System.Drawing.Size(0, 20);
+            this.lblCountRules.Size = new System.Drawing.Size(0, 16);
             this.lblCountRules.TabIndex = 12;
             // 
             // dgvLuat
             // 
             this.dgvLuat.AllowUserToAddRows = false;
             this.dgvLuat.AllowUserToDeleteRows = false;
+            this.dgvLuat.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvLuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.dataGridViewTextBoxColumn1});
-            this.dgvLuat.Location = new System.Drawing.Point(-6, 29);
+            this.dgvLuat.Location = new System.Drawing.Point(11, 29);
             this.dgvLuat.Name = "dgvLuat";
+            this.dgvLuat.RowHeadersVisible = false;
             this.dgvLuat.Size = new System.Drawing.Size(289, 258);
             this.dgvLuat.TabIndex = 10;
             this.dgvLuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLuat_CellClick);
@@ -327,7 +333,7 @@
             // 
             // Luat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnHuyChon);
             this.Controls.Add(this.btnLuu);

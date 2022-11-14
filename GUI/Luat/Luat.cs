@@ -36,8 +36,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         #region Event
         private void OnLuatLoad(object sender, EventArgs e)
         {
-            if (_frmChuanDoanHongHocDienThoai._quyen == "admin")
-            {
+           
                 btnChonVeTrai.Enabled = true;
                 btnChonVePhai.Enabled = true;
                 btnHuyChon.Enabled = true;
@@ -45,17 +44,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
                 btnLuu.Enabled = true;
-            }
-            else
-            {
-                btnChonVeTrai.Enabled = false;
-                btnChonVePhai.Enabled = false;
-                btnHuyChon.Enabled = false;
-                btnThem.Enabled = false;
-                btnSua.Enabled = false;
-                btnXoa.Enabled = false;
-                btnLuu.Enabled = false;
-            }
+        
             kn.LoadToDataGridView(dgvTrieuChung, path + "TrieuChung.txt");
             kn.LoadToDataGridView(dgvTrieuChung, path + "MoTaKetLuan.txt");
             kn.LoadToDataGridView(dgvLuat, path + "Rules.txt");
@@ -218,8 +207,9 @@ namespace ChuanDoanHongHocDienThoai.GUI
         public void GhiFile()
         {
             FileStream fs = new FileStream(path + "Rules.txt", FileMode.Append, FileAccess.Write);
-            StreamWriter stw = new StreamWriter(fs, Encoding.UTF8);
+            StreamWriter stw = new StreamWriter(fs, encoding: Encoding.UTF8);
             stw.WriteLine(txtLuatSo.Text.Trim() + ": " + txtVeTrai.Text.Trim() + " -> " + txtVePhai.Text.Trim());
+          
             stw.Flush();
             stw.Close();
             fs.Close();

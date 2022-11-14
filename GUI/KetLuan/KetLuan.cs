@@ -13,7 +13,7 @@ using ChuanDoanHongHocDienThoai.Common;
 
 namespace ChuanDoanHongHocDienThoai.GUI
 {
-    public partial class SuKien : UserControl
+    public partial class KetLuan : UserControl
     {
         #region Field
         public string path = Application.StartupPath + "\\";
@@ -25,7 +25,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         #endregion Field
 
         #region Constructor
-        public SuKien()
+        public KetLuan()
         {
             InitializeComponent();
 
@@ -40,8 +40,8 @@ namespace ChuanDoanHongHocDienThoai.GUI
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
                 btnLuu.Enabled = true;
-            kn.LoadToDataGridView(dgvTrieuChung, path + "TrieuChung.txt");
-            // kn.LoadToDataGridView(dgvTrieuChung, path + "MoTaKetLuan.txt");
+           // kn.LoadToDataGridView(dgvKetLuan, path + "TrieuChung.txt");
+            kn.LoadToDataGridView(dgvKetLuan, path + "MoTaKetLuan.txt");
             LoadSuKien();
         }
         /// <summary>
@@ -113,8 +113,8 @@ namespace ChuanDoanHongHocDienThoai.GUI
         /// <param name="e"></param>
         private void OnDgvTrieuChungCellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtID.Text = dgvTrieuChung.CurrentRow.Cells[0].Value.ToString();
-            txtMoTa.Text = dgvTrieuChung.CurrentRow.Cells[1].Value.ToString();
+            txtID.Text = dgvKetLuan.CurrentRow.Cells[0].Value.ToString();
+            txtMoTa.Text = dgvKetLuan.CurrentRow.Cells[1].Value.ToString();
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         /// </summary>
         public void GhiFile()
         {
-            FileStream fs = new FileStream(path + "TrieuChung.txt", FileMode.Append, FileAccess.Write);
+            FileStream fs = new FileStream(path + "MoTaKetLuan.txt", FileMode.Append, FileAccess.Write);
             StreamWriter stw = new StreamWriter(fs, Encoding.UTF8);
             stw.WriteLine(txtID.Text.Trim() + ": " + txtMoTa.Text.Trim());
             stw.Flush();
@@ -156,7 +156,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         /// </summary>
         public void SuaFile()
         {
-            StreamReader sr = File.OpenText("TrieuChung.txt");
+            StreamReader sr = File.OpenText("MoTaKetLuan.txt");
             string[] tam = new string[count_node];
             ev._suKien = txtID.Text;
             ev._nguNghia = txtMoTa.Text;
@@ -172,7 +172,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
                     tam[i] = sr.ReadLine();
             }
             sr.Close();
-            FileStream outtream = new FileStream("TrieuChung.txt", FileMode.Create);
+            FileStream outtream = new FileStream("MoTaKetLuan.txt", FileMode.Create);
             StreamWriter sw = new StreamWriter(outtream, Encoding.UTF8);
             for (int i = 0; i < count_node; i++)
             {
@@ -186,7 +186,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         /// </summary>
         public void XoaSK()
         {
-            StreamReader sr = File.OpenText("TrieuChung.txt");
+            StreamReader sr = File.OpenText("MoTaKetLuan.txt");
             string[] tam = new string[count_node];
             Event Ev = new Event();
             Ev._suKien = txtID.Text;
@@ -204,7 +204,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
                 }
             }
             sr.Close();
-            FileStream fs = new FileStream("TrieuChung.txt", FileMode.Create);
+            FileStream fs = new FileStream("MoTaKetLuan.txt", FileMode.Create);
             StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
             for (int i = 0; i < count_node; i++)
             {
@@ -229,7 +229,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         private int Count_SuKien()
         {
             int i = 0;
-            StreamReader sr = File.OpenText("TrieuChung.txt");
+            StreamReader sr = File.OpenText("MoTaKetLuan.txt");
             while (sr.ReadLine() != null)
                 i++;
             sr.Close();
@@ -260,7 +260,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         private void LoadSuKien()
         {
             count_node = Count_SuKien();
-            StreamReader sr = File.OpenText("TrieuChung.txt");
+            StreamReader sr = File.OpenText("MoTaKetLuan.txt");
             string tg = "";
             for (int i = 0; i < count_node; i++)
             {

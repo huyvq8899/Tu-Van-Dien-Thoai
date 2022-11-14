@@ -39,8 +39,12 @@ namespace ChuanDoanHongHocDienThoai
             _pnlRight.Controls.Add(trangChu);
             trangChu.Show();
 
-            lblInformation.Text = @"Chức năng: Tư vấn chọn ngành thi đại học";
+            lblInformation.Text = @"Chức năng: Tư vấn mua điện thoại";
             
+        }
+        private void OnBtnChuanDoanClick(object sender, EventArgs e)
+        {
+            OnFrmChuanDoanBenhTimLoad(sender, e);
         }
 
         private void OnBtnDangNhapLick(object sender, EventArgs e)
@@ -61,6 +65,15 @@ namespace ChuanDoanHongHocDienThoai
 
             lblInformation.Text = @"Chức năng: Quản lý sự kiện";
         }
+        private void OnQuanLyKetLuanClick(object sender, EventArgs e)
+        {
+            _pnlRight.Controls.Clear();
+            KetLuan ketLuan = new KetLuan();
+            _pnlRight.Controls.Add(ketLuan);
+            ketLuan.Show();
+
+            lblInformation.Text = @"Chức năng: Quản lý kết luận";
+        }
 
         private void OnQuanLyTapLuatClick(object sender, EventArgs e)
         {
@@ -80,16 +93,6 @@ namespace ChuanDoanHongHocDienThoai
             gioiThieu.Show();
 
             lblInformation.Text = @"Chức năng: Giới thiệu chương trình";
-        }
-
-        private void OnBtnChuanDoanClick(object sender, EventArgs e)
-        {
-            _pnlRight.Controls.Clear();
-            TrangChu trangChu = new TrangChu();
-            _pnlRight.Controls.Add(trangChu);
-            trangChu.Show();
-
-            lblInformation.Text = @"Chức năng: Tư vấn chọn ngành";
         }
         private void OnLblCloseMouseMove(object sender, MouseEventArgs e)
         {
@@ -188,5 +191,9 @@ namespace ChuanDoanHongHocDienThoai
         }
         #endregion Event
 
+        private void _pnlTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

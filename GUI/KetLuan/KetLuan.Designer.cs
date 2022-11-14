@@ -1,6 +1,6 @@
 ﻿namespace ChuanDoanHongHocDienThoai.GUI
 {
-    partial class SuKien
+    partial class KetLuan
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,11 +36,11 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.dgvTrieuChung = new System.Windows.Forms.DataGridView();
+            this.dgvKetLuan = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCount = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTrieuChung)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetLuan)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -129,19 +129,19 @@
             // 
             // dgvTrieuChung
             // 
-            this.dgvTrieuChung.AllowUserToAddRows = false;
-            this.dgvTrieuChung.AllowUserToDeleteRows = false;
-            this.dgvTrieuChung.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvTrieuChung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTrieuChung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvKetLuan.AllowUserToAddRows = false;
+            this.dgvKetLuan.AllowUserToDeleteRows = false;
+            this.dgvKetLuan.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvKetLuan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKetLuan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dgvTrieuChung.Location = new System.Drawing.Point(52, 203);
-            this.dgvTrieuChung.Name = "dgvTrieuChung";
-            this.dgvTrieuChung.RowHeadersVisible = false;
-            this.dgvTrieuChung.Size = new System.Drawing.Size(735, 321);
-            this.dgvTrieuChung.TabIndex = 9;
-            this.dgvTrieuChung.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnDgvTrieuChungCellClick);
+            this.dgvKetLuan.Location = new System.Drawing.Point(52, 203);
+            this.dgvKetLuan.Name = "dgvKetLuan";
+            this.dgvKetLuan.RowHeadersVisible = false;
+            this.dgvKetLuan.Size = new System.Drawing.Size(735, 321);
+            this.dgvKetLuan.TabIndex = 9;
+            this.dgvKetLuan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnDgvTrieuChungCellClick);
             // 
             // Column1
             // 
@@ -170,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblCount);
-            this.Controls.Add(this.dgvTrieuChung);
+            this.Controls.Add(this.dgvKetLuan);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -184,7 +184,7 @@
             this.Name = "SuKien";
             this.Size = new System.Drawing.Size(835, 572);
             this.Load += new System.EventHandler(this.OnSuKienLoad);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTrieuChung)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetLuan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,7 +200,7 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.DataGridView dgvTrieuChung;
+        private System.Windows.Forms.DataGridView dgvKetLuan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Label lblCount;

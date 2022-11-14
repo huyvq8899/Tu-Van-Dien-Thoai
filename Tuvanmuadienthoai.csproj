@@ -7,10 +7,26 @@
     <ProjectGuid>{404F7265-F26B-4418-9A58-CC0CD6BB92E1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChuanDoanBenhTim</RootNamespace>
-    <AssemblyName>ChuanDoanBenhTim</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>ChuanDoanHongHocDienThoai</RootNamespace>
+    <AssemblyName>ChuanDoanHongHocDienThoai</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +46,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -56,11 +80,23 @@
     <Compile Include="GUI\DangNhap\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormKQ\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormKQ\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GioiThieu\GioiThieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\GioiThieu\GioiThieu.Designer.cs">
       <DependentUpon>GioiThieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KetLuan\KetLuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\KetLuan\KetLuan.Designer.cs">
+      <DependentUpon>KetLuan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\KhoiDong\KhoiDong.cs">
       <SubType>Form</SubType>
@@ -97,18 +133,25 @@
     <EmbeddedResource Include="GUI\DangNhap\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormKQ\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GioiThieu\GioiThieu.resx">
       <DependentUpon>GioiThieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\KhoiDong\KhoiDong.resx">
-      <DependentUpon>KhoiDong.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\KetLuan\KetLuan.resx">
+      <DependentUpon>KetLuan.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="GUI\KhoiDong\KhoiDong.resx">
+      <DependentUpon>KhoiDong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
     <EmbeddedResource Include="GUI\Luat\Luat.resx">
       <DependentUpon>Luat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\MainForm\ChuanDoanHongHocDienThoai.resx">
+    <None Include="GUI\MainForm\ChuanDoanHongHocDienThoai.resx">
       <DependentUpon>ChuanDoanHongHocDienThoai.cs</DependentUpon>
-    </EmbeddedResource>
+    </None>
     <EmbeddedResource Include="GUI\SuKien\SuKien.resx">
       <DependentUpon>SuKien.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,8 +160,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -139,19 +182,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\android-8-oreo_m.gif" />
+    <None Include="Resources\%24this.Icon.ico" />
     <Content Include="Resources\background.JPG" />
     <Content Include="Resources\background_top.JPG" />
-    <Content Include="Resources\benh-tim-mach.jpg" />
+    <None Include="Resources\errormobile.png" />
     <Content Include="Resources\Event 20.10.png" />
     <Content Include="Resources\footer_BenhTim.jpg" />
     <Content Include="Resources\header_TuVan.jpg" />
     <Content Include="Resources\iconhome.png" />
     <Content Include="Resources\icon_resource.png" />
+    <None Include="Resources\Image.bmp" />
     <Content Include="Resources\information - Copy.png" />
     <Content Include="Resources\information.png" />
     <Content Include="Resources\login.png" />
-    <Content Include="Resources\_pnlBottom.jpg" />
-    <Content Include="Resources\_pnlTop.jpg" />
+    <None Include="Resources\sukien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

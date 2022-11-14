@@ -123,33 +123,10 @@
   <metadata name="timeProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAAAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAA
-        AAD+/v7////////////////////////+/v7////////////////+/v7+/v7+/Pv9+/b////+/v77+/z7
-        +/v+/v7////+/v77+/v8/Pz9/f3+/v7+/v7////////////+/v7////5+fq3ur2lp6rq7O3+/v76+vro
-        6evp6uzx8vP5+Pn8/Pz+/v7////////////+/v7i5OWbnKDDxMWPkJP5+fr39/fLzNLS09nf4OTq6evy
-        8vP5+fn9/f3////////+/v7Mzc68u73y8vGpqajZ2NjS1OqEisihpdK+vtPT0dfi4eTt7e74+Pj+/v7/
-        ///+/v69vr6Uk5P29fPm5N+npaV3eMg7OrtZWLleYrN/g72vsdTZ1uDu6+38/Pz////+/v3Cv7ylo53T
-        z8v49Oudm5lcXMIyNMlAQLZOSLJBPJdBQaNnbsi+v+H39Pb+/v7+/fzNycTa19Gjnpr8+O+hn5pSUMAx
-        M84vMLkoK08NDQ0lJ0U2ONdRWMjT1O7+/v7+/v318uzs6eW4tbD9+vWjoJxRTMMwMMotLLonKDEaGhoi
-        IiNVU8d0gemiqd/+/v7+/v3+/Pnl5OLY19P+/Pqtq6dTTcktK8QoKagyNU4yMzMrKzKon+bHy/iEi9z1
-        9v3+/v7+/Pvn5uTq6uf5+PW1s69cVtErKL0pLII7NoJLQ6JlVspSQelXTudSWOD19v3+/v7+/f3x8e7z
-        8+/y8e21s66Lhd0uLqw8OXFyX+1yV+/l3vqcj/NHTOCGjO3+/v7+/v7+/v37+/nV1Mzj4963trTj4vc6
-        Omp9eOC0q/RRQt5/eeKPk+uLlOzw8fz////////+/v7+/fv08/D9+va4t7S6urmwr8Sfoe6DgOeppun+
-        /v79/f7+/v7+//7////////+/v7+/Pr59vH9+/i2sq+rqqf+/fv+/v7+/v7+/v7/////////////////
-        /////////v/+/v77+/v+/v7g4OH29fT+/v7+/Pv+/fv+/v7+/v7///////////////8AAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</value>
-  </data>
 </root>

@@ -22,7 +22,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         #region Event
         private void OnBtnDangNhapClick(object sender, EventArgs e)
         {
-            if (txtTenDangNhap.Text == "admin" && txtMatKhau.Text == "chuandoanbenhtim")
+            if (txtTenDangNhap.Text == "admin" && txtMatKhau.Text == "admin")
             {
                 _frmChuanDoanHongHocDienThoai._quyen = txtTenDangNhap.Text.Trim();
                 MessageBox.Show("Đăng nhập thành công, mời thực hiện các chức năng của mình!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

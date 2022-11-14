@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_frmChuanDoanHongHocDienThoai));
             this._pnlRight = new System.Windows.Forms.Panel();
             this._pnlLeft = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this._btnChuanDoan = new System.Windows.Forms.Button();
             this._btnGioiThieu = new System.Windows.Forms.Button();
             this._btnQuanLyTapLuat = new System.Windows.Forms.Button();
@@ -39,6 +39,7 @@
             this.lblInformation = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this._pnlTop = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this._lblMiniMax = new System.Windows.Forms.Label();
             this._lblClose = new System.Windows.Forms.Label();
             this._pnlLeft.SuspendLayout();
@@ -50,25 +51,40 @@
             // 
             this._pnlRight.BackgroundImage = global::ChuanDoanHongHocDienThoai.Properties.Resources.background_top;
             this._pnlRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._pnlRight.Location = new System.Drawing.Point(165, 39);
+            this._pnlRight.Location = new System.Drawing.Point(164, 39);
             this._pnlRight.Name = "_pnlRight";
-            this._pnlRight.Size = new System.Drawing.Size(835, 572);
+            this._pnlRight.Size = new System.Drawing.Size(836, 572);
             this._pnlRight.TabIndex = 3;
             // 
             // _pnlLeft
             // 
             this._pnlLeft.BackgroundImage = global::ChuanDoanHongHocDienThoai.Properties.Resources.background_top;
             this._pnlLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._pnlLeft.Controls.Add(this.button1);
             this._pnlLeft.Controls.Add(this._btnChuanDoan);
             this._pnlLeft.Controls.Add(this._btnGioiThieu);
             this._pnlLeft.Controls.Add(this._btnQuanLyTapLuat);
             this._pnlLeft.Controls.Add(this._btnQuanLySuKien);
-            this._pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this._pnlLeft.Location = new System.Drawing.Point(0, 39);
             this._pnlLeft.Name = "_pnlLeft";
-            this._pnlLeft.Size = new System.Drawing.Size(165, 572);
+            this._pnlLeft.Size = new System.Drawing.Size(165, 611);
             this._pnlLeft.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ChuanDoanHongHocDienThoai.Properties.Resources.background_top;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::ChuanDoanHongHocDienThoai.Properties.Resources.sukien;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(17, 260);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 100);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Kết Luận";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.OnQuanLyKetLuanClick);
             // 
             // _btnChuanDoan
             // 
@@ -95,7 +111,7 @@
             this._btnGioiThieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._btnGioiThieu.Image = global::ChuanDoanHongHocDienThoai.Properties.Resources.information___Copy;
             this._btnGioiThieu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this._btnGioiThieu.Location = new System.Drawing.Point(17, 458);
+            this._btnGioiThieu.Location = new System.Drawing.Point(19, 505);
             this._btnGioiThieu.Name = "_btnGioiThieu";
             this._btnGioiThieu.Size = new System.Drawing.Size(125, 100);
             this._btnGioiThieu.TabIndex = 3;
@@ -113,7 +129,7 @@
             this._btnQuanLyTapLuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._btnQuanLyTapLuat.Image = global::ChuanDoanHongHocDienThoai.Properties.Resources.icon_resource;
             this._btnQuanLyTapLuat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this._btnQuanLyTapLuat.Location = new System.Drawing.Point(17, 324);
+            this._btnQuanLyTapLuat.Location = new System.Drawing.Point(17, 383);
             this._btnQuanLyTapLuat.Name = "_btnQuanLyTapLuat";
             this._btnQuanLyTapLuat.Size = new System.Drawing.Size(125, 100);
             this._btnQuanLyTapLuat.TabIndex = 2;
@@ -131,7 +147,7 @@
             this._btnQuanLySuKien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._btnQuanLySuKien.Image = global::ChuanDoanHongHocDienThoai.Properties.Resources.Event_20_10;
             this._btnQuanLySuKien.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this._btnQuanLySuKien.Location = new System.Drawing.Point(17, 175);
+            this._btnQuanLySuKien.Location = new System.Drawing.Point(19, 138);
             this._btnQuanLySuKien.Name = "_btnQuanLySuKien";
             this._btnQuanLySuKien.Size = new System.Drawing.Size(125, 100);
             this._btnQuanLySuKien.TabIndex = 1;
@@ -146,19 +162,19 @@
             // 
             this._pnlBottom.BackgroundImage = global::ChuanDoanHongHocDienThoai.Properties.Resources.background_top;
             this._pnlBottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this._pnlBottom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this._pnlBottom.Controls.Add(this.lblInformation);
             this._pnlBottom.Controls.Add(this.label1);
-            this._pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this._pnlBottom.Location = new System.Drawing.Point(0, 611);
+            this._pnlBottom.Location = new System.Drawing.Point(164, 610);
             this._pnlBottom.Name = "_pnlBottom";
-            this._pnlBottom.Size = new System.Drawing.Size(1000, 39);
+            this._pnlBottom.Size = new System.Drawing.Size(836, 40);
             this._pnlBottom.TabIndex = 1;
             // 
             // lblInformation
             // 
             this.lblInformation.AutoSize = true;
             this.lblInformation.Image = global::ChuanDoanHongHocDienThoai.Properties.Resources.header_TuVan;
-            this.lblInformation.Location = new System.Drawing.Point(384, 9);
+            this.lblInformation.Location = new System.Drawing.Point(280, 9);
             this.lblInformation.Name = "lblInformation";
             this.lblInformation.Size = new System.Drawing.Size(0, 20);
             this.lblInformation.TabIndex = 3;
@@ -174,18 +190,32 @@
             // 
             // _pnlTop
             // 
+            this._pnlTop.BackColor = System.Drawing.SystemColors.Control;
             this._pnlTop.BackgroundImage = global::ChuanDoanHongHocDienThoai.Properties.Resources.background;
             this._pnlTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this._pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._pnlTop.Controls.Add(this.label2);
             this._pnlTop.Controls.Add(this._lblMiniMax);
             this._pnlTop.Controls.Add(this._lblClose);
             this._pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this._pnlTop.Location = new System.Drawing.Point(0, 0);
             this._pnlTop.Name = "_pnlTop";
-            this._pnlTop.Size = new System.Drawing.Size(1000, 39);
+            this._pnlTop.Size = new System.Drawing.Size(1000, 40);
             this._pnlTop.TabIndex = 0;
+            this._pnlTop.Paint += new System.Windows.Forms.PaintEventHandler(this._pnlTop_Paint);
             this._pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OnPnlTopMouseDown);
             this._pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnPnlTopMouseMove);
             this._pnlTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnPnlTopMouseUp);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Image = global::ChuanDoanHongHocDienThoai.Properties.Resources.background;
+            this.label2.Location = new System.Drawing.Point(13, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tư vấn mua điện thoại";
             // 
             // _lblMiniMax
             // 
@@ -220,7 +250,7 @@
             this._lblClose.MouseLeave += new System.EventHandler(this.OnLblCloseMouseLeave);
             this._lblClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.OnLblCloseMouseMove);
             // 
-            // _frmChuanDoanBenhTim
+            // _frmChuanDoanHongHocDienThoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,16 +261,16 @@
             this.Controls.Add(this._pnlTop);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "_frmChuanDoanBenhTim";
+            this.Name = "_frmChuanDoanHongHocDienThoai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chuẩn đoán bệnh tim";
+            this.Text = "Chuẩn đoán hỏng hóc điện thoại";
             this.Load += new System.EventHandler(this.OnFrmChuanDoanBenhTimLoad);
             this._pnlLeft.ResumeLayout(false);
             this._pnlBottom.ResumeLayout(false);
             this._pnlBottom.PerformLayout();
             this._pnlTop.ResumeLayout(false);
+            this._pnlTop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -259,6 +289,8 @@
         private System.Windows.Forms.Button _btnChuanDoan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblInformation;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

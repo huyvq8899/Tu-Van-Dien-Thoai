@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
 using ChuanDoanHongHocDienThoai.Common;
-
+using ChuanDoanHongHocDienThoai.GUI.FormKQ;
 namespace ChuanDoanHongHocDienThoai.GUI
 {
     public partial class TrangChu : UserControl
@@ -24,6 +24,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         string str = string.Empty;
         string id = string.Empty;
         string moTa = string.Empty;
+        public string da;
         // int dong = 0;
         #endregion Field
 
@@ -44,7 +45,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         {
             try
             {
-                lstTrieuChung.Items.Add(dgvTrieuChung.CurrentRow.Cells[0].Value.ToString() + ": " + dgvTrieuChung.CurrentRow.Cells[1].Value.ToString());
+                lstMota.Items.Add(dgvTrieuChung.CurrentRow.Cells[0].Value.ToString() + ": " + dgvTrieuChung.CurrentRow.Cells[1].Value.ToString());
             }
             catch
             {
@@ -56,7 +57,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         {
             try
             {
-                lstTrieuChung.Items.RemoveAt(lstTrieuChung.SelectedIndex);
+                lstMota.Items.RemoveAt(lstMota.SelectedIndex);
             }
             catch
             {
@@ -66,19 +67,21 @@ namespace ChuanDoanHongHocDienThoai.GUI
 
         private void OnBtnChuanDoanClick(object sender, EventArgs e)
         {
-            if (lstTrieuChung.Items.Count == 0)
+            
+
+
+            if (lstMota.Items.Count == 0)
             {
-                MessageBox.Show("Không có thông tin dữ kiện, không thể chuẩn đoán được ngành nghề phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không có thông tin dữ kiện, không thể chuẩn đoán được loại hỏng hóc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 GT = new List<string>();
-                lstKetQua.Items.Clear();
                 Regex RE = new Regex(": ");
-                for (int i = 0; i < lstTrieuChung.Items.Count; i++)
+                for (int i = 0; i < lstMota.Items.Count; i++)
                 {
                     string[] r;
-                    r = RE.Split(lstTrieuChung.Items[i].ToString());
+                    r = RE.Split(lstMota.Items[i].ToString());
                     GT.Add(r[0]);
                 }
                 
@@ -88,22 +91,39 @@ namespace ChuanDoanHongHocDienThoai.GUI
                 kq.AddRange(xl.forward_reasoning());
                 if (kq.Count != 0)
                 {
+                    string temp = "";
+                    
                     for (int i = 0; i < kq.Count; i++)
                     {
-                        lstKetQua.Items.Add(kn.DocFile(path + "MoTaKetLuan.txt").Rows[kq[i]][1]);
+                        da = kn.DocFile(path + "MoTaKetLuan.txt").Rows[kq[i]][0].ToString();
+                       for(int j= 0; j < da.Length; j++)
+                        {
+                            if(da[j] >='0' && da[j] <= '9')
+                            {
+                                temp +=da[j].ToString();
+                            }
+                        }
+
+                    
                     }
+                    Form1 a = new Form1(temp);
+                    a.Show();
                 }
                 else
                 {
-                    lstKetQua.Items.Add("Các dữ kiện chưa đủ để đưa ra ngành nghề phù hợp với bạn!");
-                    lstKetQua.Items.Add("\t" + "==> Không thể tư vấn được ngành nghề phù hợp!");
+                    MessageBox.Show("Không tìm thấy sản phẩm tương ứng với lựa chọn của bạn!! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 view = xl.view;
                 rtbGiaiThich.Text = view;
-            }
+               
+            }  
         }
 
         #endregion Event
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -17,8 +17,8 @@ namespace ChuanDoanHongHocDienThoai
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           Application.Run(new _frmChuanDoanHongHocDienThoai());
-           // Application.Run(new KhoiDong());
+           // Application.Run(new _frmChuanDoanHongHocDienThoai());
+            Application.Run(new KhoiDong());
         }
     }
 }

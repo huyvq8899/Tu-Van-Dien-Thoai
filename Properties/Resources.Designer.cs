@@ -19,7 +19,7 @@ namespace ChuanDoanHongHocDienThoai.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,19 +63,9 @@ namespace ChuanDoanHongHocDienThoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _pnlBottom {
+        internal static System.Drawing.Bitmap android_8_oreo_m {
             get {
-                object obj = ResourceManager.GetObject("_pnlBottom", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _pnlTop {
-            get {
-                object obj = ResourceManager.GetObject("_pnlTop", resourceCulture);
+                object obj = ResourceManager.GetObject("android_8_oreo_m", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +93,9 @@ namespace ChuanDoanHongHocDienThoai.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap benh_tim_mach {
+        internal static System.Drawing.Bitmap errormobile {
             get {
-                object obj = ResourceManager.GetObject("benh_tim_mach", resourceCulture);
+                object obj = ResourceManager.GetObject("errormobile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +176,16 @@ namespace ChuanDoanHongHocDienThoai.Properties {
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sukien {
+            get {
+                object obj = ResourceManager.GetObject("sukien", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

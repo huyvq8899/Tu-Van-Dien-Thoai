@@ -24,6 +24,7 @@ namespace ChuanDoanHongHocDienThoai.GUI
         {
             timeProgress.Enabled = true;
         }
+
         private void timeProgress_Tick(object sender, EventArgs e)
         {
             if (progressBar.Value == progressBar.Maximum)
@@ -41,5 +42,10 @@ namespace ChuanDoanHongHocDienThoai.GUI
             }
         }
         #endregion Event
+
+        private void progressBar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

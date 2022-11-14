@@ -33,12 +33,11 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lstTrieuChung = new System.Windows.Forms.ListBox();
+            this.lstMota = new System.Windows.Forms.ListBox();
             this.btnChon = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnChuanDoan = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lstKetQua = new System.Windows.Forms.ListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rtbGiaiThich = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
@@ -56,18 +55,21 @@
             this.groupBox1.Size = new System.Drawing.Size(320, 534);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tập các triệu chứng";
+            this.groupBox1.Text = "Tập các mô tả";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dgvTrieuChung
             // 
             this.dgvTrieuChung.AllowUserToAddRows = false;
             this.dgvTrieuChung.AllowUserToDeleteRows = false;
+            this.dgvTrieuChung.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvTrieuChung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTrieuChung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.Column2});
             this.dgvTrieuChung.Location = new System.Drawing.Point(6, 29);
             this.dgvTrieuChung.Name = "dgvTrieuChung";
+            this.dgvTrieuChung.RowHeadersVisible = false;
             this.dgvTrieuChung.Size = new System.Drawing.Size(308, 499);
             this.dgvTrieuChung.TabIndex = 12;
             // 
@@ -87,7 +89,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lstTrieuChung);
+            this.groupBox2.Controls.Add(this.lstMota);
             this.groupBox2.Location = new System.Drawing.Point(479, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(342, 192);
@@ -95,14 +97,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các dữ kiện";
             // 
-            // lstTrieuChung
+            // lstMota
             // 
-            this.lstTrieuChung.FormattingEnabled = true;
-            this.lstTrieuChung.ItemHeight = 20;
-            this.lstTrieuChung.Location = new System.Drawing.Point(7, 19);
-            this.lstTrieuChung.Name = "lstTrieuChung";
-            this.lstTrieuChung.Size = new System.Drawing.Size(329, 164);
-            this.lstTrieuChung.TabIndex = 0;
+            this.lstMota.FormattingEnabled = true;
+            this.lstMota.ItemHeight = 16;
+            this.lstMota.Location = new System.Drawing.Point(7, 19);
+            this.lstMota.Name = "lstMota";
+            this.lstMota.Size = new System.Drawing.Size(329, 164);
+            this.lstMota.TabIndex = 0;
             // 
             // btnChon
             // 
@@ -132,9 +134,9 @@
             // 
             this.btnChuanDoan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChuanDoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChuanDoan.Location = new System.Drawing.Point(575, 221);
+            this.btnChuanDoan.Location = new System.Drawing.Point(170, 21);
             this.btnChuanDoan.Name = "btnChuanDoan";
-            this.btnChuanDoan.Size = new System.Drawing.Size(123, 35);
+            this.btnChuanDoan.Size = new System.Drawing.Size(203, 56);
             this.btnChuanDoan.TabIndex = 4;
             this.btnChuanDoan.Text = "Tư vấn";
             this.btnChuanDoan.UseVisualStyleBackColor = true;
@@ -142,22 +144,13 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lstKetQua);
+            this.groupBox3.Controls.Add(this.btnChuanDoan);
             this.groupBox3.Location = new System.Drawing.Point(366, 257);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(455, 95);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Kết quả tư vấn";
-            // 
-            // lstKetQua
-            // 
-            this.lstKetQua.FormattingEnabled = true;
-            this.lstKetQua.ItemHeight = 20;
-            this.lstKetQua.Location = new System.Drawing.Point(6, 21);
-            this.lstKetQua.Name = "lstKetQua";
-            this.lstKetQua.Size = new System.Drawing.Size(443, 64);
-            this.lstKetQua.TabIndex = 1;
+            this.groupBox3.Text = "Tư vấn";
             // 
             // groupBox4
             // 
@@ -179,11 +172,10 @@
             // 
             // TrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnChuanDoan);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnChon);
             this.Controls.Add(this.groupBox2);
@@ -210,8 +202,7 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnChuanDoan;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox lstTrieuChung;
-        private System.Windows.Forms.ListBox lstKetQua;
+        private System.Windows.Forms.ListBox lstMota;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RichTextBox rtbGiaiThich;
         private System.Windows.Forms.DataGridView dgvTrieuChung;
